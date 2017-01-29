@@ -32,7 +32,7 @@ if( count($productObj->getAll()) ){
 	
 	foreach( $productObj->getAll() as $row ){
 	
-	print '<tr><td>'.$row->product_title.'</td><td>/'.$row->product_seo_url.'</td><td>'.$row->category_title.'</td><td><a class="btn btn-primary" href="account.php?page=product&action=edit&id='.$row->product_id.'">Edit <i class="fa fa-edit"></i></a> <a onclick="return confirm(\'Are you sure you want to delete this product?\')" class="btn btn-primary" href="account.php?page=products&action=delete&id='.$row->product_id.'">Delete <i class="fa fa-remove"></i></a></td></tr>';
+	print '<tr><td>'.$row->product_title.'</td><td>/'.$row->seo_url.'/'.$row->product_seo_url.'</td><td>'.$row->category_title.'</td><td><a class="btn btn-primary" href="account.php?page=product&action=edit&id='.$row->product_id.'">Edit <i class="fa fa-edit"></i></a> <a onclick="return confirm(\'Are you sure you want to delete this product?\')" class="btn btn-primary" href="account.php?page=products&action=delete&id='.$row->product_id.'">Delete <i class="fa fa-remove"></i></a></td></tr>';
 	
 	}
 	

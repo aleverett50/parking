@@ -92,13 +92,6 @@ tinymce.init({
 								</div>
 								
 								<div class="form-group">
-									<label class="col-md-4 control-label">SEO Friendly URL</label>
-									<div class="col-md-6">
-										<input type="text" class="form-control" name="seo_url" id="seo_url" value="<?php if(isset($row)){ print $row->seo_url; } ?>">
-									</div>
-								</div>
-
-								<div class="form-group">
 									<label class="col-md-4 control-label">Category</label>
 									<div class="col-md-6">
 										
@@ -126,20 +119,33 @@ tinymce.init({
 										
 									</div>
 								</div>
-
 								
 								<div class="form-group">
-									<label class="col-md-4 control-label">Price</label>
+									<label class="col-md-4 control-label">SEO Friendly URL</label>
 									<div class="col-md-6">
-										<input type="text" class="form-control" name="price" id="price" value="<?php if(isset($row)){ print $row->price; } ?>">
+										<input type="text" class="form-control" name="seo_url" id="seo_url" value="<?php if(isset($row)){ print $row->seo_url; } ?>">
 									</div>
 								</div>
 								
 								<div class="form-group">
-									<label class="col-md-4 control-label">Description</label>
+									<label class="col-md-4 control-label">Meta Title</label>
+									<div class="col-md-6">
+										<input type="text" class="form-control" name="meta_title" id="meta_title" value="<?php if(isset($row)){ print $row->meta_title; } ?>">
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-md-4 control-label">Meta Description</label>
+									<div class="col-md-6">
+										<input type="text" class="form-control" name="meta_description" id="meta_description" value="<?php if(isset($row)){ print $row->meta_description; } ?>">
+									</div>
+								</div>
+								
+								<div class="form-group">
+									<label class="col-md-4 control-label">Text</label>
 									<div class="col-md-6">
 										
-				<textarea class="form-control" rows="7" name="description" id="description"><?php if(isset($_SESSION[SESSION.'description'])){ print $_SESSION[SESSION.'description']; } else if(isset($row)){ print $row->description; } ?></textarea>
+				<textarea class="form-control" rows="7" name="text" id="text"><?php if(isset($_SESSION[SESSION.'text'])){ print $_SESSION[SESSION.'text']; } else if(isset($row)){ print $row->text; } ?></textarea>
 										
 									</div>
 								</div>

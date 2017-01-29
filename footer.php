@@ -1,28 +1,16 @@
 
-<footer class="container-fluid footer-fluid-bg no-padding">		<!-- change footer-fluid-bg to same colour as footer if it needs to be fluid - default to white -->
+<footer class="container-fluid footer-fluid-bg mt-20">
 
-      <div class="container footer footer-padding">
-
-	<div class="row">
-	
-		<div class="col-md-4"> <a href="<?= DOMAIN ?>/request"><div class="bar bg-main-colour"> <div class="green-circle bg-secondary-colour">  <i class="fa fa-gbp fa-2x"></i> </div> Get a FREE quote   <i class="fa fa-chevron-right pull-right mt-5"></i> </div> </a> </div>
-		<div class="col-md-4">  <a href="<?= DOMAIN ?>/request"><div class="bar bg-main-colour"> <div class="green-circle bg-secondary-colour">  <i class="fa fa-comments fa-2x"></i> </div> Book an appointment   <i class="fa fa-chevron-right pull-right mt-5"></i> </div> </a> </div>
-		<div class="col-md-4">  <a href="<?= DOMAIN ?>/request"><div class="bar bg-main-colour"> <div class="green-circle bg-secondary-colour">  <i class="fa fa-book fa-2x"></i> </div>  Request a brochure <i class="fa fa-chevron-right pull-right mt-5"></i> </div> </a></div>
-	
-	</div>
-		
-	<hr class="mt-0 footer-hr" />
+      <div class="container footer pb-20">
 	
 	<div class="row">
 	
-		<div class="col-md-3 col-sm-6"> 
-		<h3 class="main-colour">Contact Us</h3> 
-		Excalibur Improvement Systems Ltd<br />
-		Unit 2, 75 Spen Lane<br />
-		Leeds<br />
-		LS16 5EL <br /><br />
-		<i class="fa fa-phone secondary-colour footer-phone"></i> 0113 426 2777<br />
-		<i class="fa fa-envelope secondary-colour footer-envelope"></i> <a href="<?= DOMAIN ?>/mailto:info@excalibur-is.com">info@excalibur-is.com</a>
+		<div class="col-md-3 col-sm-6 site-map"> 
+		<h3 class="main-colour">Popular Links</h3> 
+			<li><a href="<?= DOMAIN ?>/airport-parking/heathrow">Heathrow Airport Parking</a></li>
+			<li><a href="<?= DOMAIN ?>/airport-parking/gatwick">Gatwick Airport Parking</a></li>
+			<li><a href="<?= DOMAIN ?>/airport-parking/stansted">Stansted Airport Parking</a></li>
+			<li><a href="<?= DOMAIN ?>/airport-parking/manchester">Manchester Airport Parking</a></li>
 		</div>
 		<div class="col-md-3 col-sm-6">
 		<h3 class="main-colour">Social Media</h3>
@@ -32,7 +20,6 @@
 					<div class="social-media fb pull-left ml-0"><a href="<?= DOMAIN ?>/#"><i class="fa fa-facebook"></i> </a> </div> 
 					<div class="social-media go pull-left"><a href="<?= DOMAIN ?>/#"><i class="fa fa-google-plus"></i> </a> </div> 
 					<div class="social-media tw pull-left"><a href="<?= DOMAIN ?>/#"><i class="fa fa-twitter"></i> </a></div> 
-					<div class="social-media in pull-left"><a href="<?= DOMAIN ?>/#"><i class="fa fa-instagram"></i> </a> </div> 
 				</div>
 			</div>
 		
@@ -78,13 +65,29 @@
 	
 	<div class="row">
 	
-		<div class="col-md-6 col-xs-12 pull-right text-left website-design-by">  Copyright <?= date('Y') ?> Excalibur Improvement Systems Ltd &copy; <a href="<?= DOMAIN ?>/http://www.wtstechnologies.co.uk">Web Design</a> by WTS Technologies </div>
+		<div class="col-md-6 col-xs-12 pull-right text-left website-design-by">  Copyright <?= date('Y') ?> <?= COMPANY_NAME ?></div>
 	
 	</div>
 
       </div>
 
 	</footer>
+	
+<script src="<?= DOMAIN ?>/js/jquery-1.11.3.min.js"></script>
+<script>
+
+$(function(){
+
+$('ul.nav li.dropdown').hover(function() {
+  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+}, function() {
+  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+});
+
+});
+
+</script>
+<script src="<?= DOMAIN ?>/js/bootstrap.min.js"></script>
     
 </body>
 </html>

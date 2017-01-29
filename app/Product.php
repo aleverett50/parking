@@ -8,14 +8,8 @@ use App\ProductImage;
 class Product extends ObjectModel{
 
     protected $table = 'products';
-    protected $fillable = ['title', 'seo_url', 'category_id', 'price', 'description'];
-    protected $rules = [
-					'title' => 'required',
-					'seo_url' => 'required|unique:products',
-					'category_id' => 'required', 
-					'price' => 'required',
-					'description' => 'required'
-			];
+    protected $fillable = ['title', 'seo_url', 'category_id', 'meta_title', 'meta_description', 'text'];
+    protected $rules = [];
 			
 			
     public function __construct()
@@ -48,8 +42,9 @@ class Product extends ObjectModel{
     public function getAllByCategory($categoryId)
     {
 
-	return $this->execute("SELECT * FROM products WHERE 
-					category_id = ? AND products.deleted_at IS NULL ", [$categoryId] );		
+	return $this->execute("SELECT *, products.title AS product_title, products.seo_url AS product_seo_url  
+					FROM products LEFT JOIN categories ON categories.id = products.category_id 
+					WHERE products.category_id = ? AND products.deleted_at IS NULL ORDER BY products.seo_url ASC ", [$categoryId] );		
 
     }
 		

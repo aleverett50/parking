@@ -34,6 +34,10 @@ body{
 
 	
 	}
+	
+.booking-form-holder{ padding-left:0 }
+.booking-form h2{ font-size:22px;color:#fff;margin-top:10px  }
+.booking-form{ background:#009DDA; padding-bottom:20px }
 
 .col-md-12.bg-secondary-colour, .col-md-12.bg-main-colour{ height:155px }
 .handshake-image{ margin-top:35px }
@@ -244,7 +248,7 @@ h1{ font-weight:bold;color:#CFDC34;font-size:25px;margin-top:20px }
 .opacity-left{ min-height:426px;background:url('../images/gradient.png');  }
 .bar._2{ font-size:28px;font-style:italic;margin-top:50px;margin-left:-15px;margin-bottom:20px }
 .light-colour{ color:#F3F3F3 }
-.bigger-text{ font-size:1.2em }
+.bigger-text{ font-size:18px }
 .not-visible{ visibility:hidden }
 a{ color:#009CD9 }
 a:hover{ color:#009CD9;text-decoration:underline }
@@ -285,11 +289,10 @@ input[type=text], textarea, select{ border-radius:0 !important }
 /* Footer CSS */
 
 .footer{ background:#F6F4F5; }
-.footer-fluid-bg{ background:#fff }
-.footer-padding{ margin-top:30px;padding-top:30px;padding-bottom:20px }
+.footer-fluid-bg{ background:#F6F4F5 }
 .footer-hr{   border-top: 1px dashed #DBDBDB; margin:0 }
 .footer-phone, .footer-envelope{ width:20px }
-.website-design-by{ font-size:12px; margin-top:-18px; color:#7C7C7C }
+.website-design-by{ font-size:12px; margin-top:10px; color:#7C7C7C }
 .site-map > a{ color:inherit }
 .site-map li{ list-style:none }
 .site-map li a{ color:#333 }
@@ -317,8 +320,10 @@ border: solid 1px #eeeeee;
 	
 }
 
-
-
+.get-a-quote-button{ margin:0; width:100%; font-size:18px;font-weight:bold }
+.breadcrumb{ background-color:transparent;margin:0 ;padding:5px;padding-right:0 }
+.breadcrumb-item{ color:#888 }
+.form-heading{ font-size:20px;margin-top:10px }
 
 
 

@@ -10,7 +10,7 @@ define('PASSWORD', '');
 define('DATABASE', 'parking');
 define('DOMAIN', 'http://localhost/parking');
 define('SMTP_HOST', 'smtp.livemail.co.uk');
-define('COMPANY_NAME', 'Excalibur Improvement Systems Ltd');
+define('COMPANY_NAME', 'Airport Parking');
 define('SMTP_USERNAME', 'alexe@wts-group.com');
 define('SMTP_EMAIL', 'alexe@wts-group.com');
 define('SMTP_PASSWORD', 'roses111!');
@@ -21,8 +21,8 @@ define('DT', date('Y-m-d H:i:s'));
 
 
 $user = new App\User;
-//$cartObj = new App\Cart;
 $categoryObj = new App\Category;
+$productObj = new App\Product;
 
 
 if( !$user->uniqueId() ){
