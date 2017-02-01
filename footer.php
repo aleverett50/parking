@@ -29,18 +29,15 @@
 		
 		<div class="row">
 			
-			<div class="col-md-4 site-map col-sm-6">
+			<div class="col-md-5 site-map col-sm-6">
 			<li><a href="<?= DOMAIN ?>/index">Home</a></li>
-			<li><a href="<?= DOMAIN ?>/about">Why Us</a></li>
-			<li><a href="<?= DOMAIN ?>/gallery">Gallery</a></li>
-			<li><a href="<?= DOMAIN ?>/blog">Blog</a></li>
+			<li><a href="<?= DOMAIN ?>/about">About Us</a></li>
+			<li><a href="<?= DOMAIN ?>/contact">Contact Us</a></li>
 			
 			</div>
 			<div class="col-md-6 site-map col-sm-6">
 			
-			<li><a href="<?= DOMAIN ?>/contact">Contact Us</a></li>
 			<li><a href="<?= DOMAIN ?>/terms">T &amp; C's</a></li>
-			<li><a href="<?= DOMAIN ?>/privacy">Privacy Policy</a></li>
 			<li><a href="<?= DOMAIN ?>/cookies">Cookie Policy</a></li>
 			
 			</div>

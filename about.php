@@ -9,9 +9,10 @@ require 'header.php';
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
-		<i class="fa fa-question-circle"></i>
-		<h1>About Us</h1>			
-			</div>
+			<i class="fa fa-question-circle"></i>
+			<h1>ABOUT US</h1>
+
+			</div>			
 		</div>
 	</div>
 </div>
