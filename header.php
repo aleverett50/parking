@@ -59,11 +59,8 @@
               </ul>
             </li>
 
-            <li class="link"><a href="<?= DOMAIN ?>/airport-hotels">AIRPORT HOTELS</a></li>
-
-	<li class="link"><a href="<?= DOMAIN ?>/blog">BLOG</a></li>
-
-
+	<li class="link"><a href="<?= DOMAIN ?>/airport-hotels">AIRPORT HOTELS</a></li>
+	    
 	<li class="link no-border"><a href="<?= DOMAIN ?>/contact">CONTACT US</a></li>
           </ul>
 

@@ -108,7 +108,7 @@ body{
 
 /* .link width depends on how many links there are. eg 5 links would be 20% */
 
-.nav > .link { width:16.6666666%;border-right:1px solid #fff }
+.nav > .link { width:20%;border-right:1px solid #fff }
 
 @media (max-width: 1199px) {
 
@@ -207,11 +207,10 @@ body{
 .need-help-div{ padding-top:18px }
 .top-bar{ background:#009CD9;height:5px }
 .social-media-div{ padding-top:10px }
-.social-media{ height:24px;width:24px;border-radius:24px;text-align:center; color:#fff; float:right;margin-left:5px; padding-top:2px !important; font-size:15px; }
+.social-media{ height:30px;width:30px;border-radius:30px;text-align:center; color:#fff; float:right;margin-left:5px; padding-top:2px !important; font-size:20px; }
 .social-media.fb{ background:#345188; }
 .social-media.tw{ background:#37A1C8; }
-.social-media.in{ background:#09608B; }
-.social-media.go{ background:#E75045;font-size:14px;padding-left:2px }
+.social-media.go{ background:#E75045;font-size:18px;padding-left:2px }
 .social-media a, .social-media a:hover{ color:#fff }
 .need-help{ font-size:28px }
 .main-colour{ color:#009CD9 }
