@@ -11,8 +11,8 @@ require 'header.php';
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
-		<i class="fa fa-plane"></i>
-		<h1><?= ucwords($row->title) ?></h1>		
+		<i class="fa fa-<?php if(strstr($_SERVER['REQUEST_URI'], 'airport-parking')){ print 'plane'; } else { print 'bed'; } ?>"></i>
+		<h1><?= strtoupper($row->title) ?></h1>		
 			</div>
 			
 			<div class="col-md-6">

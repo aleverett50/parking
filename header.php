@@ -65,19 +65,7 @@
               </ul>
             </li>
 
-            <li class="dropdown link">
-              <a href="<?= DOMAIN ?>/airport-hotels" class="dropdown-toggle">AIRPORT HOTELS</a>
-              <ul class="dropdown-menu">
-	      <?php foreach( $productObj->getAllByCategory(8) as $product ){ ?>
-	      
-	      <li><a href="<?= DOMAIN ?>/<?= strtolower($product->seo_url) ?>/<?= strtolower($product->product_seo_url) ?>"><?= strtoupper($product->product_seo_url) ?></a></li>
-	      
-	     <?php } ?>
-
-              </ul>
-            </li>
-
-	<li class="link"><a href="<?= DOMAIN ?>/blog">BLOG</a></li>
+            <li class="link"><a href="<?= DOMAIN ?>/airport-hotels">AIRPORT HOTELS</a></li>
 
 	<li class="link no-border"><a href="<?= DOMAIN ?>/contact">CONTACT US</a></li>
           </ul>
