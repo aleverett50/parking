@@ -18,11 +18,9 @@ require 'header.php';
 
 <div class="container" style="position:relative">
 
-<div style="width:90px;height:90px;border:6px solid #009CD9; border-radius:90px"></div>
+<div style="width:75px;height:75px;border:6px solid #009CD9; border-radius:75px"></div>
 
-<div style="width:87px;height:87px;background:#39C7FD; border-radius:87px;position:absolute;top:2px;left:19px"></div>
-
-<i class="fa fa-plane" style="color:#fff; position:absolute;top:2px;left:45px;font-size:100px"></i>
+<div style="width:72px;height:72px;background:#39C7FD; border-radius:72px;position:absolute;top:2px;left:19px"></div>
 
 
 </div>
