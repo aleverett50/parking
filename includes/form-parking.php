@@ -1,8 +1,8 @@
 				<form action="" method="get">
 			
-				<p class="white form-heading"><i class="fa fa-car"></i> Your Instant Airport Parking Quote</p>
+				<p class="form-heading"><i class="fa fa-car"></i> Your Instant Airport Parking Quote</p>
 				
-				<p class="white bigger-text mb-2">Airport:</p>
+				<p class="bigger-text mb-2">Airport:</p>
 				
 				<select class="form-control" name="airport">
 				
@@ -10,7 +10,7 @@
 				
 				</select>
 				
-				<p class="white bigger-text mt-10 mb-2">Arrival date at car park:</p>
+				<p class="bigger-text mt-10 mb-2">Arrival date at car park:</p>
 				
 				<div class="row">
 					<div class="col-md-6">
@@ -26,7 +26,7 @@
 					</div>
 				</div>
 				
-				<p class="white bigger-text mt-10 mb-2">Return date / landing time:</p>
+				<p class="bigger-text mt-10 mb-2">Return date / landing time:</p>
 				
 				<div class="row">
 					<div class="col-md-6">
@@ -42,7 +42,7 @@
 					</div>
 				</div>
 				
-				<p class="white bigger-text mt-10 mb-2">Passengers:</p>
+				<p class="bigger-text mt-10 mb-2">Passengers:</p>
 				
 				<div class="row">
 					<div class="col-md-6">

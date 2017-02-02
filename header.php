@@ -21,7 +21,7 @@
 			
 			<div class="col-md-12 text-right pt-5" style="height:80px">
 
-			<img style="height:80px" src="images/suitcase.jpg" class="img-responsive pull-right">
+			<img style="margin-top:-15px" src="images/tag.png" class="img-responsive pull-right">
 			
 			</div>
 		
