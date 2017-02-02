@@ -73,6 +73,14 @@ class Tools
 		}	
 
 	}
+	
+	if( strstr( $_SERVER['REQUEST_URI'], '.php' ) ){
+	
+		/* Remove the .php in URL */
+	
+		redirect( str_replace('.php', '', $_SERVER['REQUEST_URI']) );
+	
+	}
 
     }
 
