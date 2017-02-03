@@ -43,25 +43,25 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="link"><a href="<?= DOMAIN ?>/index"><i class="fa fa-home"></i> HOME</a></li>
+            <li class="link"><a href="<?= DOMAIN ?>/index"><i class="fa fa-home"></i> Home</a></li>
 
-            <li class="link"><a href="<?= DOMAIN ?>/about">ABOUT US</a></li>
+            <li class="link"><a href="<?= DOMAIN ?>/about">About Us</a></li>
 
             <li class="dropdown link">
-              <a href="<?= DOMAIN ?>/airport-parking" class="dropdown-toggle">AIRPORT PARKING</a>
+              <a href="<?= DOMAIN ?>/airport-parking" class="dropdown-toggle">Airport Parking</a>
               <ul class="dropdown-menu">
 	      <?php foreach( $productObj->getAllByCategory(6) as $product ){ ?>
 	      
-	      <li><a href="<?= DOMAIN ?>/<?= strtolower($product->seo_url) ?>/<?= strtolower($product->product_seo_url) ?>"><?= strtoupper($product->product_seo_url) ?></a></li>
+	      <li><a href="<?= DOMAIN ?>/<?= strtolower($product->seo_url) ?>/<?= strtolower($product->product_seo_url) ?>"><?= ucwords($product->product_seo_url) ?></a></li>
 	      
 	     <?php } ?>
 
               </ul>
             </li>
 
-	<li class="link"><a href="<?= DOMAIN ?>/airport-hotels">AIRPORT HOTELS</a></li>
+	<li class="link"><a href="<?= DOMAIN ?>/airport-hotels">Airport Hotels</a></li>
 	    
-	<li class="link no-border"><a href="<?= DOMAIN ?>/contact">CONTACT US</a></li>
+	<li class="link no-border"><a href="<?= DOMAIN ?>/contact">Contact Us</a></li>
           </ul>
 
         </div><!--/.nav-collapse -->

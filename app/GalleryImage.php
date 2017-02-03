@@ -6,7 +6,7 @@ class GalleryImage extends ObjectModel
 {
 
     protected $table = 'gallery_images';
-    protected $fillable = ['alt', 'ext'];
+    protected $fillable = ['alt', 'ext', 'filename'];
     protected $rules = [];
 
     public function getAll()
@@ -15,11 +15,12 @@ class GalleryImage extends ObjectModel
     }
 
 
-    public function addImage($id = null, $alt, $ext)
+    public function addImage($id = null, $alt, $ext, $filename)
     {
 
 	$this->alt = $alt;
 	$this->ext = $ext;
+	$this->filename = $filename;
     
 	return parent::add();
 
@@ -35,11 +36,12 @@ class GalleryImage extends ObjectModel
     }
 
     
-    public function updateImage($id, $alt, $ext)
+    public function updateImage($id, $alt, $ext, $filename)
     {
 
 	$this->alt = $alt;
 	$this->ext = $ext;
+	$this->filename = $filename;
 
 	parent::update('id = :id', ['id' => $id]);
 	

@@ -19,8 +19,19 @@ $url = $_SERVER['REQUEST_URI'];
 
 		$productObj = new Product;
 		$row = $productObj->getRowByField('seo_url', $slug);
-		include('page.php');
+		
+		if($row){
+		
+			include('page.php');
+			exit;
+		
+		} else {
+		
+			include('404.php');
+			exit;
+		
+		}
+		
+		
 	
 	}
-
-	exit;

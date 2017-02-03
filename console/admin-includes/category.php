@@ -75,7 +75,7 @@ tinymce.init({
 
 <h1>CATEGORY</h1>
 
-	<form enctype="multipart/form-data" class="form-horizontal" <?php if($action == 'add'){ print 'id="form"'; } ?> method="post" action="">
+	<form class="form-horizontal" <?php if($action == 'add'){ print 'id="form"'; } ?> method="post" action="">
 
 						<div class="panel panel-default">
 						<div class="panel-heading"><?= strtoupper($action) ?> CATEGORY</div>
@@ -112,45 +112,11 @@ tinymce.init({
 								<div class="form-group">
 									<label class="col-md-4 control-label">Text</label>
 									<div class="col-md-6">
-										<textarea name="text" class="form-control"><?php if(isset($row)){ print $row->text; } ?></textarea>
+										<textarea rows="40" name="text" class="form-control"><?php if(isset($row)){ print $row->text; } ?></textarea>
 									</div>
 								</div>
 								
-								<?php for($i = 1; $i < 3; $i++){ ?>
-								
-								<div class="form-group">
-									<label class="col-md-4 control-label">Alt Tag <?= $i; ?></label>
-									<div class="col-md-6">
-										<input type="text" class="form-control" id="alt-<?= $i; ?>" name="alt-<?= $i; ?>" value="<?php if(isset($category_images[$i-1]->alt)){ print $category_images[$i-1]->alt; } ?>">										
-									</div>
-								</div>
-								
-								<?php if(isset( $category_images[$i-1]->id )){ ?>
-								
-								<input type="hidden" name="id-<?= $i; ?>" value="<?= $category_images[$i-1]->id ?>">
-								<input type="hidden" name="ext-<?= $i; ?>" value="<?= $category_images[$i-1]->ext ?>">
-								
-								<?php } ?>
-								
-								<div class="form-group">
-									<label class="col-md-4 control-label">Image <?= $i; ?> (JPG, PNG or GIF)</label>
-									<div class="col-md-6">
-										<input type="file" class="form-control" name="file-<?= $i; ?>">
-										
-										<?php
-										
-										if(isset($category_images[$i-1]->ext)){
-										
-	print "<br /><a onclick=\"return confirm('Are you sure you want to delete this image?')\" href='account.php?page=category&action=delete-image&image_id=".$category_images[$i-1]->id."'><img style='width:150px' src='../category-images/".$category_images[$i-1]->id.".".$category_images[$i-1]->ext."'></a>"; 
-										
-										}
-										
-										?>
-										
-									</div>
-								</div>
-								
-								<?php } ?>
+
 
 								<div class="form-group">
 									<div class="col-md-6 col-md-offset-4">

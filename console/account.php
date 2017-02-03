@@ -40,7 +40,7 @@ print json_encode($results); exit;
 
 <?php include(dirname(__FILE__).'/header.php'); ?>
 
-<div class="container">
+<div class="container-fluid">
 
 <script>setTimeout(function() {
   $(".alert-success").fadeTo(500, 0).slideUp(500, function(){

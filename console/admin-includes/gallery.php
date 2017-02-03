@@ -14,7 +14,7 @@ if($action == 'delete-image'){
 if( isset($_POST['post']) ){
 
 	Tools::validateImages();
-	Tools::updateImages( $id = null, 'gallery-images', $galleryimageObj );
+	Tools::updateImages( $id = null, 'images', $galleryimageObj );
 	redirect( 'account.php?page=gallery&action=add', 'The image has been uploaded' );
 
 }
@@ -42,9 +42,15 @@ if( isset($_POST['post']) ){
 								
 								<div class="form-group">
 
-									<div class="col-md-4">
+									<div class="col-md-3">
 										
 									<input placeholder="Image Title..." type="text" class="form-control" id="alt-<?= $i; ?>" name="alt-<?= $i; ?>" value="<?php if(isset($gallery_image->alt)){ print $gallery_image->alt; } ?>">										
+									
+									</div>
+									
+									<div class="col-md-3">
+										
+									<input placeholder="Image Title..." type="text" class="form-control" id="filename-<?= $i; ?>" name="filename-<?= $i; ?>" value="<?php if(isset($gallery_image->filename)){ print $gallery_image->filename; } ?>">										
 									
 									</div>
 									
@@ -57,9 +63,15 @@ if( isset($_POST['post']) ){
 									
 									</div>
 									
-									<div class="col-md-4">
+									<div class="col-md-2">
 									
-<?php print "<a onclick=\"return confirm('Are you sure you want to delete this image?')\" href='account.php?page=gallery&action=delete-image&image_id=".$gallery_image->id."'><img style='height:50px' src='../gallery-images/".$gallery_image->id.".".$gallery_image->ext."'></a>";  ?>
+<?php print "<a onclick=\"return confirm('Are you sure you want to delete this image?')\" href='account.php?page=gallery&action=delete-image&image_id=".$gallery_image->id."'><img style='height:50px' src='../images/".$gallery_image->filename.".".$gallery_image->ext."'></a>";  ?>
+									
+									</div>
+									
+									<div class="col-md-12">
+									
+<?= htmlspecialchars('<img class="img-responsive" '); print 'src="'.DOMAIN.'/images/'. $gallery_image->filename.".".$gallery_image->ext.'" alt="'.ucwords($gallery_image->alt).'" '; print htmlspecialchars('/>');  ?>    <br /><br />
 									
 									</div>
 									
@@ -73,9 +85,15 @@ if( isset($_POST['post']) ){
 								
 								<div class="form-group">
 								
-									<div class="col-md-4">
+									<div class="col-md-3">
 									
-									<input placeholder="Image Title..." type="text" class="form-control" id="alt-<?= $i ?>" name="alt-<?= $i ?>">
+									<input placeholder="Alt Tag..." type="text" class="form-control" id="alt-<?= $i ?>" name="alt-<?= $i ?>">
+										
+									</div>
+									
+									<div class="col-md-3">
+									
+									<input placeholder="Filename..." type="text" class="form-control" id="filename-<?= $i ?>" name="filename-<?= $i ?>">
 										
 									</div>
 									
@@ -90,7 +108,7 @@ if( isset($_POST['post']) ){
 								<br /><br />
 								
 								<div class="form-group">
-									<div class="col-md-6 col-md-offset-2">
+									<div class="col-md-6 col-md-offset-4">
 										<button type="submit" class="btn btn-primary pull-right"> UPLOAD </button>
 									</div>
 								</div>

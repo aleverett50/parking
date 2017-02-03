@@ -269,11 +269,13 @@ class Tools
 			
 			$ext = $_POST['ext-'.$file_num];
 			
+			$filename = $_POST['filename-'.$file_num];
+			
 			if( isset($_FILES['file-'.$file_num]) && $_FILES['file-'.$file_num]['size'] > 0 ){
 			
 				$ext = self::getFileExtension($_FILES['file-'.$file_num]['name']);
 				
-				move_uploaded_file($_FILES['file-'.$file_num]['tmp_name'], '../'.$image_folder.'/'.$_POST[$key].'.'.$ext);
+				move_uploaded_file($_FILES['file-'.$file_num]['tmp_name'], '../'.$image_folder.'/'.$filename.'.'.$ext);
 				
 				/*  Put this file upload in an array so we can skip it later on in the script  */
 				
@@ -283,7 +285,7 @@ class Tools
 			
 			/*  Update the file row  */
 			
-			$obj->updateImage( $_POST[$key], $_POST['alt-'.$file_num], $ext );
+			$obj->updateImage( $_POST[$key], $_POST['alt-'.$file_num], $ext, $filename );
 		
 		}
 	
@@ -302,11 +304,14 @@ class Tools
 			$alt_key = str_replace('file', 'alt', $key);
 			$alt = $_POST[$alt_key];
 			
+			$filename_key = str_replace('file', 'filename', $key);
+			$filename = $_POST[$filename_key];
+			
 			$ext = self::getFileExtension($_FILES[$key]['name']);
 		
-			$image_id = $obj->addImage( $id, $alt, $ext );
+			$image_id = $obj->addImage( $id, $alt, $ext, $filename );
 			
-			move_uploaded_file($_FILES[$key]['tmp_name'], '../'.$image_folder.'/'.$image_id.'.'.$ext);
+			move_uploaded_file($_FILES[$key]['tmp_name'], '../'.$image_folder.'/'.$filename.'.'.$ext);
 		
 		}
 

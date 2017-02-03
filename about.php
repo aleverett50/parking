@@ -10,7 +10,7 @@ require 'header.php';
 		<div class="row">
 			<div class="col-md-6">
 			<i class="fa fa-question-circle"></i>
-			<h1>ABOUT US</h1>
+			<h1>About Us</h1>
 
 			</div>			
 		</div>

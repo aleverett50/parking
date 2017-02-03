@@ -150,6 +150,8 @@ tinymce.init({
 									</div>
 								</div>
 								
+								<!--
+								
 								<?php for($i = 1; $i < 3; $i++){ ?>
 								
 								<div class="form-group">
@@ -185,6 +187,8 @@ tinymce.init({
 								</div>
 								
 								<?php } ?>
+								
+								-->
 
 								<div class="form-group">
 									<div class="col-md-6 col-md-offset-4">

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 29, 2017 at 10:05 PM
+-- Generation Time: Feb 03, 2017 at 03:17 PM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -92,8 +92,8 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `title`, `seo_url`, `text`, `meta_description`, `meta_title`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(6, 'Airport Parking', 'airport-parking', '<p>This is parking text</p>\r\n<p>another para</p>', 'This is a meta desc for airport parking', 'title for parking', '2017-01-10 16:12:12', '2017-01-26 21:02:28', NULL),
-(8, 'Airport Hotels', 'airport-hotels', '<p>this is text</p>\r\n<p>another paragraph</p>', 'This is a meta desc for airport hotels', 'title for ap hotels', '2017-01-26 14:48:36', '2017-01-26 21:47:12', NULL);
+(6, 'Airport Parking', 'airport-parking', '<p>Airport parking in the UK is an integral part of booking a holiday now. All airports offer services for people wishing to park their car for the duration of their holiday. The kind of service you go for&nbsp;and how much you would like to spend is up to you. There are different options for you to consider, these being On Site Parking, Off Site Parking and a Meet&nbsp;&amp; Greet service. What do we mean by that?</p>\r\n<h2>On Site Parking</h2>\r\n<p>On Site Parking is a service whereby you drive to the airport and park your car at the airport, with just a short bus ride to and from the car park. You would take your keys with you when you travel</p>\r\n<h2>Off Site Parking</h2>\r\n<p>Off Site Parking is situated away from the airport, usually a couple of miles away. Customers park their car and jump on a shuttle bus which takes them to and from the airport. Buses run frequently, usually every 15 minutes. This is gernally the cheapest form of airport parking.</p>\r\n<h2>Meet &amp; Greet</h2>\r\n<p>Meet&nbsp;&amp; Greet or Valet Parking as it is also known is the most convenient way to park your car. You just drive to the terminal where you are met by a representitive, hand them your keys and away you go. You are then met on your return at the terminal where you can drive off, no hassle.</p>', 'We offer airport parking at over 25 airports in the UK. Book online now and save money!', 'Airport Parking, Meet and Greet, Cheap Car Parking UK', '2017-01-10 16:12:12', '2017-02-03 13:57:21', NULL),
+(8, 'Airport Hotels', 'airport-hotels', '<p>this is text</p>\r\n<p>another paragraph</p>', 'This is a meta desc for airport hotels', 'title for ap hotels', '2017-01-26 14:48:36', '2017-02-03 10:28:19', NULL);
 
 -- --------------------------------------------------------
 
@@ -129,6 +129,7 @@ CREATE TABLE `gallery_images` (
   `id` int(11) NOT NULL,
   `alt` varchar(50) NOT NULL,
   `ext` varchar(4) NOT NULL,
+  `filename` varchar(50) NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime DEFAULT NULL
@@ -138,16 +139,8 @@ CREATE TABLE `gallery_images` (
 -- Dumping data for table `gallery_images`
 --
 
-INSERT INTO `gallery_images` (`id`, `alt`, `ext`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(6, 'aasxx', 'jpg', '2017-01-26 11:59:13', '2017-01-26 12:11:21', '2017-01-26 12:11:21'),
-(7, 'First Gallery Image', 'jpg', '2017-01-26 12:10:35', '2017-01-26 13:01:40', NULL),
-(8, 'Second Gallery Image', 'jpg', '2017-01-26 12:10:49', '2017-01-26 13:01:40', NULL),
-(9, '', 'jpg', '2017-01-26 12:11:14', '2017-01-26 12:11:18', '2017-01-26 12:11:18'),
-(10, 'Third Gallery Image', 'jpg', '2017-01-26 12:21:51', '2017-01-26 13:01:40', NULL),
-(11, 'fourth', 'jpg', '2017-01-26 12:28:17', '2017-01-26 13:01:40', NULL),
-(12, 'five', 'jpg', '2017-01-26 12:28:25', '2017-01-26 13:01:40', NULL),
-(13, 'aaa x', 'jpg', '2017-01-26 12:34:05', '2017-01-26 13:01:40', NULL),
-(14, 'aa', 'jpg', '2017-01-26 13:01:40', '2017-01-26 13:01:43', '2017-01-26 13:01:43');
+INSERT INTO `gallery_images` (`id`, `alt`, `ext`, `filename`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'alt tag', 'jpg', 'gatwick-airport-parking', '2017-02-03 10:33:10', '2017-02-03 10:33:10', NULL);
 
 -- --------------------------------------------------------
 
@@ -173,7 +166,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `category_id`, `title`, `seo_url`, `meta_title`, `meta_description`, `text`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(2, 6, 'manchester airport parking', 'manchester', 'Manchester Airport parking, meet and greet', 'We offer great deals for airport parking at Manchester. Valet parking is also available.', '<p>You can save massive amounts of money by pre-booking. We have excellent rates for parking at Manchester Airport, instant quote available on right. Cheap rates also for meet and greet parking at all terminals at Manchester.</p>\r\n<p>Not sure what kind of parking you are looking for? On site, off site, valet parking? submit your quote request and read details of all our 9 parking locations. Then you can decide which site would be best for you.</p>', '2017-01-10 15:12:10', '2017-01-29 11:23:38', NULL),
+(2, 6, 'manchester airport parking', 'manchester', 'Manchester Airport parking, meet and greet', 'We offer great deals for airport parking at Manchester. Valet parking is also available.', '<p>You can save massive amounts of money by pre-booking. We have excellent rates for parking at Manchester Airport, instant quote available on right. Cheap rates also for meet and greet parking at all terminals at Manchester.</p>\r\n<p>Not sure what kind of parking you are looking for? On site, off site, valet parking? submit your quote request and read details of all our 9 parking locations. Then you can decide which site would be best for you.</p>', '2017-01-10 15:12:10', '2017-02-03 10:29:36', NULL),
 (3, 6, 'airport parking gatwick', 'gatwick', 'Airport Parking at Gatwick, North Terminal, South Terminal', 'We offer great deals for airport parking at Gatwick terminals.', '<p>Airport parking at Gatwick South terminal and North Terminal. We offer a wide range of parking options for your travel requirements that are affordable and convenient. All our car parks are secure with a shuttle service to transport you to the terminal.</p>\r\n<p>To see all available parking, please complete the box on the left of this page, make your selection, then if you wish to proceed, book securely online.</p>', '2017-01-10 15:41:23', '2017-01-29 11:17:27', NULL),
 (4, 6, 'p', 'p', '10.00', '<p>s</p>', '', '2017-01-26 10:56:46', '2017-01-26 11:01:28', '2017-01-26 11:01:28'),
 (5, 6, 'asdasd', 'asd', '0.00', '<p>asd</p>', '', '2017-01-26 10:58:31', '2017-01-26 11:00:37', '2017-01-26 11:00:37'),
@@ -334,7 +327,7 @@ ALTER TABLE `category_images`
 -- AUTO_INCREMENT for table `gallery_images`
 --
 ALTER TABLE `gallery_images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `products`
 --

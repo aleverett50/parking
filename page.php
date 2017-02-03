@@ -12,7 +12,7 @@ require 'header.php';
 		<div class="row">
 			<div class="col-md-6">
 		<i class="fa fa-<?php if(strstr($_SERVER['REQUEST_URI'], 'airport-parking')){ print 'plane'; } else { print 'bed'; } ?>"></i>
-		<h1><?= strtoupper($row->title) ?></h1>		
+		<h1><?= ucwords($row->title) ?></h1>		
 			</div>
 			
 			<div class="col-md-6">
@@ -50,7 +50,11 @@ require 'header.php';
 		
 		</div>
 		
-		<div class="col-md-4"><?= $row->text ?></div>
+		<div class="col-md-8">
+		
+		<?= $row->text ?>
+		
+		</div>
   
         </div>
 

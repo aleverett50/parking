@@ -27,7 +27,7 @@ if( count($categoryObj->getAll()) ){
 
 	<table class="table table-striped table-hover">
 
-	<tr><td><strong>Title</strong></td><td><strong>SEO Friendly URL</strong></td><td><strong>Meta Description</strong></td><td><strong>Meta Title</strong></td><td><strong>Action</strong></td></tr>
+	<tr><td><strong>Title</strong></td><td><strong>SEO Friendly URL</strong></td><td><strong>Meta Description</strong></td><td><strong>Meta Title</strong></td><td width="15%"><strong>Action</strong></td></tr>
 	
 	<?php
 	
